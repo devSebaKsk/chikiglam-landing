@@ -174,73 +174,38 @@ const Hero = (): JSX.Element => {
           });
         }
       });
-    }, sectionRef);
+    }, containerRef);
 
     return () => ctx.revert();
   }, []);
 
   return (
-    <section ref={sectionRef} id="hero" className="min-h-screen bg-gradient-to-br from-brand-blue/10 via-white to-brand-purple/10 relative overflow-hidden flex items-center">
-      {/* Fondo con parallax */}
-      <div
-        ref={backgroundRef}
-        className="absolute inset-0 bg-gradient-to-br from-brand-cyan/5 via-transparent to-brand-pink/5 will-change-transform"
-      >
-        {Array.from({ length: 5 }, (_, i) => (
-          <div
-            key={i}
-            ref={(el) => el && (floatingShapesRef.current[i] = el)}
-            className={`absolute will-change-transform rounded-full bg-gradient-to-r ${[
-              'w-32 h-32 from-brand-yellow/20 to-brand-pink/20',
-              'w-20 h-20 from-brand-cyan/20 to-brand-blue/20',
-              'w-40 h-40 from-brand-purple/20 to-brand-pink/20',
-              'w-24 h-24 from-brand-blue/20 to-brand-cyan/20',
-              'w-16 h-16 from-brand-pink/20 to-brand-purple/20',
-            ][i]}`}
-            style={{
-              top: `${15 + Math.random() * 70}%`,
-              left: `${5 + Math.random() * 90}%`,
-            }}
-          />
-        ))}
-      </div>
 
-      <div className="container-custom relative z-10 text-center">
-        {/* Logo animado */}
-        <div ref={logoRef} className="flex justify-center mb-8">
-            
-          </div>
-          
-          
-    return () => ctx.revert();
-  }, []);
-
-  return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background con parallax */}
+  <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    {/* Background con parallax */}
+    <div 
+      ref={backgroundRef}
+      className="absolute inset-0 bg-gradient-to-r from-brand-purple via-brand-pink to-brand-cyan will-change-transform"
+    >
+      <div className="absolute inset-0 bg-black/20"></div>
+      
+      {/* Particles de estrellas */}
+      {Array.from({ length: 20 }, (_, i) => (
+        <div
+          key={i}
+          ref={el => starsRef.current[i] = el!}
+          className="absolute text-white/30 text-sm pointer-events-none will-change-transform"
+        >
+          <FiStar />
+        </div>
+      ))}
+      
+      {/* Elemento parallax adicional */}
       <div 
-        ref={backgroundRef}
-        className="absolute inset-0 bg-gradient-to-r from-brand-purple via-brand-pink to-brand-cyan will-change-transform"
-      >
-        <div className="absolute inset-0 bg-black/20"></div>
-        
-        {/* Particles de estrellas */}
-        {Array.from({ length: 20 }, (_, i) => (
-          <div
-            key={i}
-            ref={el => starsRef.current[i] = el!}
-            className="absolute text-white/30 text-sm pointer-events-none will-change-transform"
-          >
-            <FiStar />
-          </div>
-        ))}
-        
-        {/* Elemento parallax adicional */}
-        <div 
-          ref={parallaxRef}
-          className="absolute inset-0 bg-gradient-to-b from-transparent via-white/5 to-transparent opacity-50"
-        ></div>
-      </div>
+        ref={parallaxRef}
+        className="absolute inset-0 bg-gradient-to-b from-transparent via-white/5 to-transparent opacity-50"
+      ></div>
+    </div>
 
       {/* Content */}
       <div className="relative z-10 container-custom text-center text-white">
