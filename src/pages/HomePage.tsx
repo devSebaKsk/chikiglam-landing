@@ -236,6 +236,7 @@ const HomePage: React.FC = () => {
       {/* Footer absoluto en la parte inferior */}
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20 text-center text-gray-500">
         <p>Creando recuerdos inolvidables desde 2024</p>
+        <p className="text-xs text-gray-600 mt-2">© 2024 PixelIT. Todos los derechos reservados.</p>
       </div>
     </div>
   );
