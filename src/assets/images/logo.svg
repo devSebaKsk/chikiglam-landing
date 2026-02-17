@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" class="chikiglam-logo">
+  <!-- Símbolo CG con círculos -->
+  <g class="logo-symbol">
+    <!-- Círculo rosa/magenta -->
+    <circle cx="40" cy="40" r="30" fill="#f4068b"/>
+    <!-- Letra C en blanco -->
+    <text x="40" y="50" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="32" font-weight="bold">C</text>
+    
+    <!-- Círculo azul claro -->
+    <circle cx="80" cy="30" r="25" fill="#83c7ed"/>
+    
+    <!-- Círculo amarillo -->
+    <circle cx="25" cy="80" r="20" fill="#fed801"/>
+    
+    <!-- Círculo morado -->
+    <circle cx="70" cy="75" r="22" fill="#6f28d0"/>
+    <!-- Letra G en blanco -->
+    <text x="70" y="83" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold">G</text>
+  </g>
+  
+  <!-- Texto Chiki Glam -->
+  <g class="logo-text">
+    <text x="120" y="50" fill="#f4068b" font-family="Arial, sans-serif" font-size="36" font-weight="bold">Chiki</text>
+    <text x="120" y="85" fill="#f4068b" font-family="Arial, sans-serif" font-size="36" font-weight="bold">Glam</text>
+  </g>
+</svg>
