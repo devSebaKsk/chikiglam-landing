@@ -174,9 +174,40 @@ const Hero = (): JSX.Element => {
           });
         }
       });
-    });
-{/* Logo animado */}
-          <div ref={logoRef} className="flex justify-center mb-8">
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  return (
+    <section ref={sectionRef} id="hero" className="min-h-screen bg-gradient-to-br from-brand-blue/10 via-white to-brand-purple/10 relative overflow-hidden flex items-center">
+      {/* Fondo con parallax */}
+      <div
+        ref={backgroundRef}
+        className="absolute inset-0 bg-gradient-to-br from-brand-cyan/5 via-transparent to-brand-pink/5 will-change-transform"
+      >
+        {Array.from({ length: 5 }, (_, i) => (
+          <div
+            key={i}
+            ref={(el) => el && (floatingShapesRef.current[i] = el)}
+            className={`absolute will-change-transform rounded-full bg-gradient-to-r ${[
+              'w-32 h-32 from-brand-yellow/20 to-brand-pink/20',
+              'w-20 h-20 from-brand-cyan/20 to-brand-blue/20',
+              'w-40 h-40 from-brand-purple/20 to-brand-pink/20',
+              'w-24 h-24 from-brand-blue/20 to-brand-cyan/20',
+              'w-16 h-16 from-brand-pink/20 to-brand-purple/20',
+            ][i]}`}
+            style={{
+              top: `${15 + Math.random() * 70}%`,
+              left: `${5 + Math.random() * 90}%`,
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="container-custom relative z-10 text-center">
+        {/* Logo animado */}
+        <div ref={logoRef} className="flex justify-center mb-8">
             
           </div>
           

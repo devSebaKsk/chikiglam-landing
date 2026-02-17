@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { FiCamera, FiStar, FiFilm, FiGift, FiTrendingUp, FiHeart } from 'react-icons/fi';
+import { FiCamera, FiStar, FiFilm, FiGift, FiHeart } from 'react-icons/fi';
 import Card from '../ui/Card';
 import Button from '../ui/Button';
 import Parallax from '../ui/Parallax';

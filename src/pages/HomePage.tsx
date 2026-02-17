@@ -1,8 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { FiUsers, FiGift } from 'react-icons/fi';
-import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 gsap.registerPlugin(ScrollTrigger);

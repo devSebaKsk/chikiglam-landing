@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiInstagram, FiFacebook, FiTwitter, FiMail, FiPhone, FiMapPin } from 'react-icons/fi';
+import { FiInstagram, FiFacebook, FiPhone, FiMapPin } from 'react-icons/fi';
 
 const Footer: React.FC = () => {
   return (

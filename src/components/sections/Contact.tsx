@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FiPhone, FiMail, FiMapPin, FiClock, FiInstagram } from 'react-icons/fi';
+import { FiPhone, FiMapPin, FiClock, FiInstagram } from 'react-icons/fi';
 import Button from '../ui/Button';
 import Card from '../ui/Card';
 
